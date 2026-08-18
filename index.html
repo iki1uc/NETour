@@ -3,11 +3,54 @@
 <head>
 <meta charset="UTF-8">
 <title>NETour</title>
+<style>
+    body {
+        font-family: monospace;
+        background: #fafafa;
+        color: #222;
+        padding: 40px;
+        text-align: center;
+    }
+    suite {
+        display: block;
+        font-size: 32px;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+    .puzzle {
+        font-size: 26px;
+        padding: 20px;
+        border: 2px dashed #444;
+        display: inline-block;
+        margin-top: 20px;
+    }
+</style>
 </head>
 <body>
 
 <suite>NETour</suite>
-<div class="puzzle" data-piece="NETour"></div>
+<slide>dimension.flow()</slide>
+
+<div class="puzzle" data-piece="NETour">
+    ((( NETour )))
+</div>
+
+<script>
+// NETour – Layer‑Slot Startsignal
+console.log("NETour geladen: Layer‑Slot aktiv");
+
+// Minimaler Slot‑Flow (kein Tool, keine Engine)
+function SLOT_FLOW() {
+    return {
+        suite: "NETour",
+        slide: "dimension.flow()",
+        piece: "NETour",
+        stamp: Date.now()
+    };
+}
+
+console.log("Slot‑Flow:", SLOT_FLOW());
+</script>
 
 </body>
 </html>
